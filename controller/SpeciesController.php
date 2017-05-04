@@ -28,19 +28,19 @@ function createSave()
 function edit($id)
 {
 	render("species/edit", array(
-		'specimen' => getSpecimen($id)
+		'species' => getSpecimen($id)
 	));
 }
 
-// function editSave()
-// {
-// 	if (!editBook()) {
-// 		header("Location:" . URL . "error/index");
-// 		exit();
-// 	}
+function editSave()
+{
+	if (!editSpecies()) {
+		header("Location:" . URL . "error/index");
+		exit();
+	}
 
-// 	header("Location:" . URL . "author/index");
-// }
+	header("Location:" . URL . "species/index");
+}
 //Delete part
 function delete($id)
 {

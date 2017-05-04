@@ -9,7 +9,7 @@
 <body>
 	<h1>Hospital</h1>
 	<ul>
-		<li><a href="#">Patiënts</a></li>
-		<li><a href="#">Clients</a></li>
+		<li><a href="<?= URL ?>patients/index">Patiënts</a></li>
+		<li><a href="<?= URL ?>clients/index">Clients</a></li>
 		<li><a href="<?= URL ?>species/index">Species</a></li>
 	</ul>
