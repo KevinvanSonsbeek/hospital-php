@@ -1,4 +1,4 @@
-<h2>Patiënts</h2>
+<h2>Clients</h2>
 	<table>
 		<thead>
 			<tr>

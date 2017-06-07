@@ -2,13 +2,6 @@
 
 require (ROOT . "model/ClientsModel.php");
 
-function index()
-{
-	render("clients/index", array(
-		'clients' => getAllClients()
-	));
-}
-
 //Create part
 function create()
 {
@@ -24,7 +17,16 @@ function createSave()
 
 	header("Location:" . URL . "clients/index");
 }
-//Edit part
+
+//Read
+function index()
+{
+	render("clients/index", array(
+		'clients' => getAllClients()
+	));
+}
+
+//Update
 function edit($id)
 {
 	render("clients/edit", array(
@@ -41,20 +43,21 @@ function editSave()
 
 	header("Location:" . URL . "clients/index");
 }
-//Delete part
-// function delete($id)
-// {
-// 	render("clients/delete", array(
-// 		'client' => getSpecimen($id)
-// 	));
-// }
 
-// function deleteSave($id)
-// {
-// 	if (!deleteClient($id)) {
-// 		header("Location:" . URL . "error/index");
-// 		exit();
-// 	}
+//Delete
+function delete($id)
+{
+	render("clients/delete", array(
+		'client' => getClient($id)
+	));
+}
 
-// 	header("Location:" . URL . "clients/index");
-// }
+function deleteSave($id)
+{
+	if (!deleteClient($id)) {
+		header("Location:" . URL . "error/index");
+		exit();
+	}
+
+	header("Location:" . URL . "clients/index");
+}

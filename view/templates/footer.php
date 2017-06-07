@@ -1,3 +1,3 @@
-	<p><a href="<?= URL ?>home/index">Home</a></p>
+	<p><a href="<?= URL ?>patients/index">Home</a></p>
 </body>
 </html>

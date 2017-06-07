@@ -9,5 +9,3 @@
             <div><label>&nbsp;</label><input type="submit" value="submit"></div>
       </form>
       </div>
-
-<?= var_dump($species) ?>

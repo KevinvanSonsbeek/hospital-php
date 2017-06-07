@@ -2,14 +2,7 @@
 
 require (ROOT . "model/SpeciesModel.php");
 
-function index()
-{
-	render("species/index", array(
-		'species' => getAllSpecies()
-	));
-}
-
-//Create part
+//Create
 function create()
 {
 	render("species/create");
@@ -24,7 +17,16 @@ function createSave()
 
 	header("Location:" . URL . "species/index");
 }
-//Update/Edit part
+
+//Read
+function index()
+{
+	render("species/index", array(
+		'species' => getAllSpecies()
+	));
+}
+
+//Update
 function edit($id)
 {
 	render("species/edit", array(
@@ -41,7 +43,7 @@ function editSave()
 
 	header("Location:" . URL . "species/index");
 }
-//Delete part
+//Delete
 function delete($id)
 {
 	render("species/delete", array(
